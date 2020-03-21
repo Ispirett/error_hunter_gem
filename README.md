@@ -1,8 +1,5 @@
 # ErrorHunter
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/error_hunter`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+## Realtime error tracking for live apps
 
 ## Installation
 
@@ -20,9 +17,26 @@ Or install it yourself as:
 
     $ gem install error_hunter
 
-## Usage
+## Setup
 
-TODO: Write usage instructions here
+##### The api is simple
+
+###### In your ```config/development``` or ``` config/production``` stage of your app the token and app name.
+###### Your token and app_name is in the dashboard on http://errorhunter.com/username/account
+
+```
+ErrorHunter::App.config(token:'yourtokenhere',app_name: 'app_name')
+```
+## Usage
+Logging an error is as simple as the code below.
+ ```
+ErrorHunter::App.add_error(
+title: "GemTest", 
+description: "testing from get" ,
+ serverity: "urgent"
+)
+```
+You can now monitor errors in realtime in your dashboard at https://errorhunter.com/apps/app_name
 
 ## Development
 
