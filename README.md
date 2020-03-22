@@ -1,9 +1,10 @@
 # ErrorHunter
+
 ## Realtime error tracking for live apps
 
 ## Installation
-
-Add this line to your application's Gemfile:
+##### before installing make sure you have an account here! [errorhunter](https://errorhunter.herokuapp.com)
+######Add this line to your application's Gemfile:
 
 ```ruby
 gem 'error_hunter'
@@ -22,7 +23,7 @@ Or install it yourself as:
 ##### The api is simple
 
 ###### In your ```config/development``` or ``` config/production``` stage of your app the token and app name.
-###### Your token and app_name is in the dashboard on http://errorhunter.com/username/account
+###### Your token and app_name is in the dashboard on https://errorhunter.herokuapp.com
 
 ```
 ErrorHunter::App.config(token:'yourtokenhere',app_name: 'app_name')
@@ -33,7 +34,7 @@ Logging an error is as simple as the code below.
 ErrorHunter::App.add_error(
 title: "GemTest", 
 description: "testing from get" ,
-log: "testing",
+log: "error probably raise by an exception",
  serverity: "urgent"
 )
 ```

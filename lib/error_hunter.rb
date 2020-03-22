@@ -6,7 +6,9 @@ module ErrorHunter
   # Your code goes here...
   module Urls
     def urls
-      @_host = "http://localhost:3000"
+      production = "https://errorhunter.herokuapp.com"
+      development = 'https://localhost:3000'
+      @_host = production
       @add_errors = @_host + '/api/app_errors'
       {add_error:  @add_errors}
     end
