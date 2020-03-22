@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ispirett@gmail.com"]
 
   spec.summary       = %q{Gem for ErrorHunter platform}
-  spec.description   = %q{Error hunter allows you track errors on you application in real time.}
+  spec.description   = %q{Error hunter allows you to track errors on your application in real time.}
   spec.homepage      = "https://github.com/Ispirett/error_hunter_gem"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
