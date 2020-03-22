@@ -30,6 +30,7 @@ module ErrorHunter
                           :title => data[:title] || 'ErrorTitle',
                           :description => data[:description] || 'Description Here',
                           :serverity => data[:serverity] || 'Urgent',
+                          :log => data[:log] || 'error log empty',
                           :app_name => @_app_name
                       }
                       )

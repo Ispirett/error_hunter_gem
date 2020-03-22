@@ -33,6 +33,7 @@ Logging an error is as simple as the code below.
 ErrorHunter::App.add_error(
 title: "GemTest", 
 description: "testing from get" ,
+log: "testing",
  serverity: "urgent"
 )
 ```
