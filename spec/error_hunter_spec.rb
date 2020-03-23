@@ -13,3 +13,8 @@ RSpec.describe ErrorHunter do
     end
   end
 end
+
+# for testing in console, run ruby bin/console
+# ErrorHunter::App.config(app_name: "cardify", token: 'NhJ2Ajb5YvXMNqDvyb1YxNpU')
+
+#ErrorHunter::App.add_error(title: "GemTest", description: "testing from get" , serverity: "urgent", log: 'from error_Hunter gem')

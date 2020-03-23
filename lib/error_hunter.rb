@@ -7,7 +7,7 @@ module ErrorHunter
   module Urls
     def urls
       production = "https://errorhunter.herokuapp.com"
-      development = 'https://localhost:3000'
+      development = 'http://localhost:3000'
       @_host = production
       @add_errors = @_host + '/api/app_errors'
       {add_error:  @add_errors}
@@ -28,13 +28,16 @@ module ErrorHunter
     def self.add_error(**data)
       begin
         make_call = RestClient.post(self.urls[:add_error],
-                      :app_error =>{
+                          {:app_error =>{
                           :title => data[:title] || 'ErrorTitle',
                           :description => data[:description] || 'Description Here',
                           :serverity => data[:serverity] || 'Urgent',
                           :log => data[:log] || 'error log empty',
                           :app_name => @_app_name
-                      }
+                      }},
+                           headers = {
+                                :AuthToken => @_token
+                            }
                       )
       JSON.parse(make_call.body)
       rescue RestClient::NotFound => e
