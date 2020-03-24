@@ -35,7 +35,7 @@ ErrorHunter::App.add_error(
 title: "GemTest", 
 description: "testing from get" ,
 log: "error probably raise by an exception",
- serverity: "urgent"
+ severity: "urgent"
 )
 ```
 You can now monitor errors in realtime in your dashboard at https://errorhunter.com/apps/app_name
